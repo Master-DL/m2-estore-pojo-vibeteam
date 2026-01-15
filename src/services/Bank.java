@@ -3,8 +3,9 @@ package services;
 import data.Account;
 import estorePojo.exceptions.InsufficientBalanceException;
 import estorePojo.exceptions.UnknownAccountException;
+import interfaces.IBank;
 
-public class Bank {
+public class Bank implements IBank {
 
 	private Account estore;
 	private Account anne, bob;
