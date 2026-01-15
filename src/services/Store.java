@@ -12,17 +12,19 @@ import estorePojo.exceptions.InsufficientBalanceException;
 import estorePojo.exceptions.InvalidCartException;
 import estorePojo.exceptions.UnknownAccountException;
 import estorePojo.exceptions.UnknownItemException;
+import interfaces.IBank;
+import interfaces.IProvider;
 import interfaces.IStore;
 
 public class Store implements IStore {
 
-    private Provider provider;
-    private Bank bank;
+    private IProvider provider;
+    private IBank bank;
 
     /**
      * Constructs a new StoreImpl
      */
-    public Store(Provider prov, Bank bk) {
+    public Store(IProvider prov, IBank bk) {
         provider = prov;
         bank = bk;
     }
