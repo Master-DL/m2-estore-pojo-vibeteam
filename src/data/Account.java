@@ -1,4 +1,4 @@
-package core;
+package data;
 
 import estorePojo.exceptions.InsufficientBalanceException;
 
@@ -22,9 +22,9 @@ public class Account {
     public void setAmount(double amount) {
         this.amount = amount;
     }
-    
+
     public void credit(double amount) {
-        this.amount += amount;        
+        this.amount += amount;
     }
 
     public void withdraw(double amount) throws InsufficientBalanceException {
@@ -32,7 +32,7 @@ public class Account {
             throw new InsufficientBalanceException(owner);
         this.amount -= amount;
     }
-    
+
     /**
      * Two AccountImpl instances are considered equals
      * if they share the same owner.
@@ -45,5 +45,5 @@ public class Account {
         Account otherAccount = (Account) other;
         return ( otherAccount.owner == owner);
     }
-    
+
 }

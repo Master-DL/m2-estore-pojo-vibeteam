@@ -1,4 +1,6 @@
-package core;
+package data;
+
+import services.Provider;
 
 public class ItemInStock {
 
@@ -28,7 +30,7 @@ public class ItemInStock {
 	public int getQuantity() {
 		return quantity;
 	}
-	
+
 	public void changeQuantity(int qtyToAddOrRemove) {
 		if ((qtyToAddOrRemove >= 0 ) || (quantity >= -qtyToAddOrRemove)) {
 			quantity += qtyToAddOrRemove ;
@@ -40,6 +42,5 @@ public class ItemInStock {
 		return "ItemInStock [num=" + num + ", item=" + item + ", quantity=" + quantity + ", price=" + price
 				+ ", provider=" + provider + "]";
 	}
-
 
 }
