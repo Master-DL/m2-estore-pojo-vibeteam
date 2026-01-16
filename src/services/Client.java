@@ -6,14 +6,18 @@ import estorePojo.exceptions.InsufficientBalanceException;
 import estorePojo.exceptions.InvalidCartException;
 import estorePojo.exceptions.UnknownAccountException;
 import estorePojo.exceptions.UnknownItemException;
+import interfaces.IProvider;
 import interfaces.IStore;
 
 public class Client implements Runnable {
 
     private IStore store;
 
-    public Client (IStore s){
+    private IProvider provider;
+
+    public Client (IStore s, IProvider p) {
     	store = s;
+        provider = p;
     }
     // -----------------------------------------------------
     // Implementation of the Runnable interface

@@ -10,24 +10,6 @@ import estorePojo.exceptions.UnknownItemException;
 
 public interface IStore {
 
-    /**
-     * Get the price of an item.
-     *
-     * @param item the item
-     * @return the price of the item
-     * @throws UnknownItemException if the item is unknown
-     */
-    double getPrice(Object item) throws UnknownItemException;
-
-    /**
-     * Check if an item is available in the given quantity.
-     *
-     * @param item the item
-     * @param qty  the quantity
-     * @return true if the item is available in the given quantity
-     * @throws UnknownItemException if the item is unknown
-     */
-    boolean isAvailable(Object item, int qty) throws UnknownItemException;
 
     /**
      * Add an item to a cart. If the cart does not exist yet, create a new one.

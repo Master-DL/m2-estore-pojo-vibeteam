@@ -31,15 +31,6 @@ public class Store implements IStore {
 
     /**
      * @param item  a given item
-     * @return      the price of a given item
-     * @throws UnknownItemException
-     */
-    public double getPrice( Object item ) throws UnknownItemException {
-        return provider.getPrice(item);
-    }
-
-    /**
-     * @param item  a given item
      * @param qty   a given quantity
      * @return
      *      true if the given quantity of the given item is available
